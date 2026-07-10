@@ -323,26 +323,47 @@ a:hover {
 /* ===== Skills Marquee (DecodeSwapnil style) ===== */
 .skills-marquee {
     background: var(--marquee-bg);
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     overflow: hidden;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.skills-marquee::before,
+.skills-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.skills-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--marquee-bg), transparent);
+}
+
+.skills-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--marquee-bg), transparent);
 }
 
 .marquee-track {
     display: flex;
-    gap: 3rem;
-    animation: marquee 20s linear infinite;
+    gap: 4rem;
+    animation: marquee 25s linear infinite;
     width: max-content;
 }
 
 .marquee-track span {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     white-space: nowrap;
+    letter-spacing: 0.02em;
 }
 
 @keyframes marquee {
