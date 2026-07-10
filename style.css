@@ -250,6 +250,22 @@ a:hover {
 .code-key { color: #e06c75; }
 .code-string { color: #98c379; }
 
+/* ===== Profile Photo ===== */
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: 0 0 40px var(--accent-glow), var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px var(--accent-glow);
+}
+
 /* ===== Buttons ===== */
 .btn {
     display: inline-block;
