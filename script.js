@@ -1,4 +1,4 @@
-// ===== Mouse Glow Effect (Brittany Chiang style) =====
+// ===== Mouse Glow Effect =====
 const mouseGlow = document.getElementById('mouseGlow');
 
 document.addEventListener('mousemove', (e) => {
@@ -50,31 +50,6 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     });
 });
 
-// ===== Scroll Spy for Side Navigation =====
-const sections = document.querySelectorAll('.content-section');
-const navLinks = document.querySelectorAll('.side-nav-link');
-
-function updateActiveNav() {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-section') === current) {
-            link.classList.add('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', updateActiveNav);
-updateActiveNav();
-
 // ===== Scroll Animations =====
 const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -88,6 +63,16 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 fadeElements.forEach(el => observer.observe(el));
+
+// ===== Navbar Shadow on Scroll =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+    } else {
+        navbar.style.boxShadow = 'none';
+    }
+});
 
 // ===== Project Modals =====
 const modalOverlay = document.getElementById('modalOverlay');
@@ -157,7 +142,7 @@ function openModal(projectId) {
     const featuresHtml = project.features.map(f => `<li>${f}</li>`).join('');
 
     modalBody.innerHTML = `
-        <div class="exp-tags" style="margin-bottom: 1.25rem;">${tagsHtml}</div>
+        <div class="project-tags" style="margin-bottom: 1rem;">${tagsHtml}</div>
         <h2>${project.title}</h2>
         <p>${project.description}</p>
         <h3>Key Features</h3>
@@ -205,14 +190,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(href);
         if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
-});
-
-// ===== Topbar Shadow on Scroll =====
-const topbar = document.getElementById('topbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        topbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.2)';
-    } else {
-        topbar.style.boxShadow = 'none';
-    }
 });
