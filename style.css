@@ -7,39 +7,39 @@
 }
 
 [data-theme="dark"] {
-    --bg-primary: #0a192f;
-    --bg-secondary: #0d1f3c;
-    --bg-card: #112240;
-    --bg-card-hover: #1a3358;
-    --text-primary: #ccd6f6;
-    --text-secondary: #8892b0;
-    --text-muted: #495670;
-    --accent: #64ffda;
-    --accent-hover: #8affea;
-    --accent-glow: rgba(100, 255, 218, 0.07);
-    --border: #1e3a5f;
-    --shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-    --nav-bg: rgba(10, 25, 47, 0.9);
-    --marquee-bg: #071225;
-    --glow-color: rgba(100, 255, 218, 0.08);
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111116;
+    --bg-card: #161620;
+    --bg-card-hover: #1c1c2a;
+    --text-primary: #e8e8f0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #5a5a70;
+    --accent: #7c6fff;
+    --accent-hover: #9488ff;
+    --accent-glow: rgba(124, 111, 255, 0.1);
+    --border: #222233;
+    --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+    --nav-bg: rgba(10, 10, 15, 0.9);
+    --marquee-bg: #0c0c12;
+    --glow-color: rgba(124, 111, 255, 0.06);
 }
 
 [data-theme="light"] {
-    --bg-primary: #f8fafc;
-    --bg-secondary: #f1f5f9;
+    --bg-primary: #fafafa;
+    --bg-secondary: #f2f2f8;
     --bg-card: #ffffff;
-    --bg-card-hover: #f0f9ff;
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --accent: #0f766e;
-    --accent-hover: #0d9488;
-    --accent-glow: rgba(15, 118, 110, 0.06);
-    --border: #e2e8f0;
-    --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
-    --nav-bg: rgba(248, 250, 252, 0.9);
-    --marquee-bg: #eef2f7;
-    --glow-color: rgba(15, 118, 110, 0.06);
+    --bg-card-hover: #f5f5ff;
+    --text-primary: #1a1a2e;
+    --text-secondary: #555570;
+    --text-muted: #888898;
+    --accent: #5a4fe6;
+    --accent-hover: #4338ca;
+    --accent-glow: rgba(90, 79, 230, 0.08);
+    --border: #e4e4ee;
+    --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.08);
+    --nav-bg: rgba(250, 250, 250, 0.92);
+    --marquee-bg: #eeeef5;
+    --glow-color: rgba(90, 79, 230, 0.05);
 }
 
 /* ===== Reset & Base ===== */
@@ -644,12 +644,12 @@ strong {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #fff;
 }
 
 .btn-primary:hover {
     background: var(--accent-hover);
-    color: var(--bg-primary);
+    color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px var(--accent-glow);
 }
@@ -679,7 +679,7 @@ strong {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 25, 47, 0.85);
+    background: rgba(5, 5, 10, 0.85);
     backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
