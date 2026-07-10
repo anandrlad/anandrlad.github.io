@@ -1,3 +1,16 @@
+// ===== Mouse Glow Effect (Brittany Chiang style) =====
+const mouseGlow = document.getElementById('mouseGlow');
+
+document.addEventListener('mousemove', (e) => {
+    mouseGlow.style.left = e.clientX + 'px';
+    mouseGlow.style.top = e.clientY + 'px';
+    mouseGlow.classList.add('active');
+});
+
+document.addEventListener('mouseleave', () => {
+    mouseGlow.classList.remove('active');
+});
+
 // ===== Theme Toggle =====
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleMobile = document.getElementById('themeToggleMobile');
@@ -10,14 +23,13 @@ function toggleTheme() {
     localStorage.setItem('theme', next);
 }
 
-// Load saved theme
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     html.setAttribute('data-theme', savedTheme);
 }
 
 themeToggle.addEventListener('click', toggleTheme);
-themeToggleMobile.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
 // ===== Mobile Menu =====
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -32,21 +44,39 @@ mobileMenuClose.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
 });
 
-// Close menu when clicking a link
 mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
 });
 
+// ===== Scroll Spy for Side Navigation =====
+const sections = document.querySelectorAll('.content-section');
+const navLinks = document.querySelectorAll('.side-nav-link');
+
+function updateActiveNav() {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-section') === current) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+updateActiveNav();
+
 // ===== Scroll Animations =====
 const fadeElements = document.querySelectorAll('.fade-in');
-
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -55,20 +85,9 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
 fadeElements.forEach(el => observer.observe(el));
-
-// ===== Navbar Background on Scroll =====
-const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-});
 
 // ===== Project Modals =====
 const modalOverlay = document.getElementById('modalOverlay');
@@ -104,7 +123,7 @@ const projectData = {
     },
     project3: {
         title: 'Sensai – Internal Secure Browser',
-        tags: ['TypeScript', 'Security', 'DevOps', 'Chrome Extension'],
+        tags: ['TypeScript', 'Security', 'DevOps'],
         description: 'Development and maintenance of an internal secure browser used across the organization for sensitive workflows.',
         features: [
             'Maintained security-hardened browsing environment for internal tools',
@@ -138,7 +157,7 @@ function openModal(projectId) {
     const featuresHtml = project.features.map(f => `<li>${f}</li>`).join('');
 
     modalBody.innerHTML = `
-        <div class="project-tags" style="margin-bottom: 1rem;">${tagsHtml}</div>
+        <div class="exp-tags" style="margin-bottom: 1.25rem;">${tagsHtml}</div>
         <h2>${project.title}</h2>
         <p>${project.description}</p>
         <h3>Key Features</h3>
@@ -156,7 +175,6 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Click on project cards to open modal
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', (e) => {
         e.preventDefault();
@@ -168,12 +186,9 @@ document.querySelectorAll('.project-card').forEach(card => {
 modalClose.addEventListener('click', closeModal);
 
 modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-        closeModal();
-    }
+    if (e.target === modalOverlay) closeModal();
 });
 
-// Close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeModal();
@@ -181,15 +196,23 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ===== Smooth Scroll for Anchor Links =====
+// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
         e.preventDefault();
         const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
+});
+
+// ===== Topbar Shadow on Scroll =====
+const topbar = document.getElementById('topbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        topbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.2)';
+    } else {
+        topbar.style.boxShadow = 'none';
+    }
 });

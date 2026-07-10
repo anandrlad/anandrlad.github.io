@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anand R. Lad | Network Engineer</title>
-    <meta name="description" content="Portfolio of Anand R. Lad — Network Engineer with 12+ years in cloud computing, distributed systems, and AWS architecture.">
+    <meta name="description" content="Portfolio of Anand R. Lad — Network Engineer with 12+ years in cloud, infrastructure & distributed systems.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-brand">Anand Lad</div>
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+    <!-- Mouse Glow Effect -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <a href="#" class="topbar-brand">
+                <img src="profile.png" alt="Anand" class="topbar-photo">
+                <span>Anand Lad</span>
+            </a>
+            <div class="topbar-links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
     </nav>
 
     <!-- Mobile Menu -->
@@ -31,297 +39,267 @@
         <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">🌓</button>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <p class="hero-greeting fade-in">Hi, I'm</p>
-            <h1 class="hero-name fade-in">Anand R. Lad</h1>
-            <h2 class="hero-title fade-in">Network Engineer</h2>
-            <p class="hero-description fade-in">
-                12+ years building and optimizing cloud infrastructure, distributed systems, and microservices at enterprise scale. CCNA/CCNP certified. Currently at Amazon, driving operational excellence and mentoring engineering teams.
-            </p>
-            <div class="hero-cta fade-in">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="./Anand_Lad_Resume.pdf" class="btn btn-secondary">Download Résumé</a>
+    <!-- Hero Section (Split Layout) -->
+    <div class="split-layout">
+        <!-- Left Column (Sticky) -->
+        <header class="left-col">
+            <div class="left-col-inner">
+                <img src="profile.png" alt="Anand R. Lad" class="hero-photo">
+                <h1 class="hero-name">Anand R. Lad</h1>
+                <h2 class="hero-title">Network Engineer</h2>
+                <p class="hero-description">
+                    12+ years building cloud infrastructure, distributed systems, and reliable networks at enterprise scale.
+                </p>
+                <nav class="side-nav" id="sideNav">
+                    <a href="#about" class="side-nav-link active" data-section="about"><span class="nav-indicator"></span>About</a>
+                    <a href="#experience" class="side-nav-link" data-section="experience"><span class="nav-indicator"></span>Experience</a>
+                    <a href="#projects" class="side-nav-link" data-section="projects"><span class="nav-indicator"></span>Projects</a>
+                </nav>
+                <div class="social-links">
+                    <a href="https://github.com/anandrlad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anand-lad-80861a8b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:anandrlad@gmail.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="hero-visual fade-in">
-            <div class="photo-wrapper">
-                <img src="profile.png" alt="Anand R. Lad" class="profile-photo">
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Skills Marquee -->
-    <div class="skills-marquee">
-        <div class="marquee-track">
-            <span>AWS</span><span>Java</span><span>Python</span><span>TypeScript</span><span>DynamoDB</span><span>Microservices</span><span>Linux</span><span>Docker</span><span>DevOps</span><span>CCNP</span>
-            <span>AWS</span><span>Java</span><span>Python</span><span>TypeScript</span><span>DynamoDB</span><span>Microservices</span><span>Linux</span><span>Docker</span><span>DevOps</span><span>CCNP</span>
-        </div>
+        <!-- Right Column (Scrollable) -->
+        <main class="right-col">
+            <!-- About Section -->
+            <section class="content-section" id="about">
+                <h3 class="section-label">About</h3>
+                <div class="about-content">
+                    <p>Results-driven engineer with <strong>12+ years</strong> of expertise in cloud computing and distributed systems, specializing in AWS architecture and microservices development.</p>
+                    <p><strong>CCNA/CCNP certified</strong> professional combining deep infrastructure knowledge with modern software development practices. Proven track record of optimizing system performance, reducing operational costs, and delivering innovative solutions at enterprise scale.</p>
+                    <p>Currently at <strong>Amazon</strong>, driving operational excellence, building microservices, and mentoring high-performing engineering teams across multiple regions.</p>
+                </div>
+            </section>
+
+            <!-- Skills Marquee -->
+            <div class="skills-marquee">
+                <div class="marquee-track">
+                    <span>AWS</span><span>Java</span><span>Python</span><span>TypeScript</span><span>CCNP</span><span>DynamoDB</span><span>Microservices</span><span>Linux</span><span>Docker</span><span>DevOps</span><span>MPLS</span><span>Cisco</span>
+                    <span>AWS</span><span>Java</span><span>Python</span><span>TypeScript</span><span>CCNP</span><span>DynamoDB</span><span>Microservices</span><span>Linux</span><span>Docker</span><span>DevOps</span><span>MPLS</span><span>Cisco</span>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <section class="content-section" id="experience">
+                <h3 class="section-label">Experience</h3>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">Dec 2022 — Present</div>
+                    <div class="exp-details">
+                        <h4>Support Engineer IV · <span class="exp-company">Amazon.com Services LLC, USA</span></h4>
+                        <p class="exp-team">AGI-DS Ops Tech & Product Team</p>
+                        <ul>
+                            <li>Development & enhancement of <strong>Staffing-Agency</strong> and <strong>Text-Extraction</strong> services</li>
+                            <li>Setup <strong>AWS infrastructure</strong> for ADS-Science team's ML models hosting</li>
+                            <li>Development & maintenance of internal secure browser <strong>Sensai</strong></li>
+                            <li>Implemented operational excellence reducing incidents and infra costs</li>
+                            <li>Mentored junior engineers across multiple regions</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Java</span><span>Python</span><span>AWS</span><span>DynamoDB</span><span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">Apr 2022 — Dec 2022</div>
+                    <div class="exp-details">
+                        <h4>Support Engineer IV · <span class="exp-company">Amazon Development Center, India</span></h4>
+                        <p class="exp-team">ADS Support</p>
+                        <ul>
+                            <li>Technical support to Alexa Engineers for <strong>ML model</strong> development</li>
+                            <li>Built microservices for <strong>ADS Customer Hub</strong> portal</li>
+                            <li>Managed AWS infrastructure and reduced operational costs</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Java</span><span>AWS</span><span>Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">May 2021 — Apr 2022</div>
+                    <div class="exp-details">
+                        <h4>Support Engineer IV · <span class="exp-company">Amazon Development Center, India</span></h4>
+                        <p class="exp-team">Physical Stores Tech Ops</p>
+                        <ul>
+                            <li>Managed technical operations for physical stores across <strong>USA and UK</strong></li>
+                            <li>Led network infrastructure setup for new store launches</li>
+                            <li>Achieved <strong>99% uptime</strong> through proactive monitoring</li>
+                            <li>Automated routine tasks reducing manual effort</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Networking</span><span>AWS</span><span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">May 2017 — May 2021</div>
+                    <div class="exp-details">
+                        <h4>IT Support Engineer II · <span class="exp-company">Amazon Development Center, India</span></h4>
+                        <p class="exp-team">Global IT Services</p>
+                        <ul>
+                            <li>Managed infrastructure for Amazon corporate sites across <strong>India</strong></li>
+                            <li>Escalation POC for Mumbai, Pune, and Delhi regions</li>
+                            <li>Led cross-functional teams in networking projects and lab setups</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Networking</span><span>Infrastructure</span><span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">Mar 2016 — May 2017</div>
+                    <div class="exp-details">
+                        <h4>Associate Consultant · <span class="exp-company">Capgemini, India</span></h4>
+                        <p class="exp-team">IMOC Team</p>
+                        <ul>
+                            <li>Managed network infrastructure for <strong>Netherlands DC</strong></li>
+                            <li>Implemented complex Cisco enterprise configurations</li>
+                            <li>Orchestrated ISP relationships and connectivity solutions</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Cisco</span><span>MPLS</span><span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-date-col">Feb 2013 — Mar 2016</div>
+                    <div class="exp-details">
+                        <h4>System Engineer · <span class="exp-company">Tata Consultancy Services, India</span></h4>
+                        <p class="exp-team">IS Team</p>
+                        <ul>
+                            <li>Managed network infrastructure for <strong>25+ projects</strong></li>
+                            <li>Implemented MPLS, VPN, and IPLC solutions</li>
+                            <li>Automated routine processes improving efficiency</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>MPLS</span><span>VPN</span><span>IPLC</span><span>Cisco</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./Anand_Lad_Resume.pdf" class="resume-link">View Full Résumé →</a>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="content-section" id="projects">
+                <h3 class="section-label">Projects</h3>
+
+                <div class="project-card" data-modal="project1">
+                    <h4>Staffing-Agency Service</h4>
+                    <p>End-to-end microservice for staffing workflow management in the AGI-DS Ops Tech team. RESTful APIs with scalable AWS infrastructure.</p>
+                    <div class="exp-tags">
+                        <span>Java</span><span>AWS</span><span>Microservices</span><span>DynamoDB</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-modal="project2">
+                    <h4>Text-Extraction Service</h4>
+                    <p>Document processing pipeline supporting AI/ML model training. Python-based with batch and real-time processing modes on AWS.</p>
+                    <div class="exp-tags">
+                        <span>Python</span><span>AWS</span><span>ML Infrastructure</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-modal="project3">
+                    <h4>Sensai – Secure Browser</h4>
+                    <p>Internal security-hardened browser for sensitive organizational workflows. Cross-platform with automated deployment pipelines.</p>
+                    <div class="exp-tags">
+                        <span>TypeScript</span><span>Security</span><span>DevOps</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-modal="project4">
+                    <h4>AI-Teacher Portal</h4>
+                    <p>Microservices powering tools for Alexa Engineers and Scientists to build and improve ML models.</p>
+                    <div class="exp-tags">
+                        <span>Java</span><span>DynamoDB</span><span>AWS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section class="content-section" id="certifications">
+                <h3 class="section-label">Certifications</h3>
+                <div class="certs-list">
+                    <div class="cert-item">
+                        <span class="cert-icon">🏅</span>
+                        <div>
+                            <h4>CCNP Routing & Switching</h4>
+                            <p>Cisco Certified Network Professional</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">🏅</span>
+                        <div>
+                            <h4>CCNA Routing & Switching</h4>
+                            <p>Cisco Certified Network Associate</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-icon">📚</span>
+                        <div>
+                            <h4>AWS Solutions Architect Associate</h4>
+                            <p>In Progress</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="content-section" id="skills">
+                <h3 class="section-label">Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h4>Cloud & Infrastructure</h4>
+                        <div class="exp-tags"><span>AWS</span><span>Cloud Architecture</span><span>IaC</span><span>DevOps</span><span>Docker</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Programming</h4>
+                        <div class="exp-tags"><span>Java</span><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Bash</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Networking</h4>
+                        <div class="exp-tags"><span>CCNA</span><span>CCNP</span><span>MPLS</span><span>VPN</span><span>IPLC</span><span>Cisco</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Databases</h4>
+                        <div class="exp-tags"><span>DynamoDB</span><span>MySQL</span><span>MS-SQL</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="content-section" id="contact">
+                <h3 class="section-label">Let's Connect</h3>
+                <p class="contact-text">I'm open to opportunities in Cloud Architecture, Network Engineering, and Technical Leadership. Let's chat.</p>
+                <div class="contact-links">
+                    <a href="mailto:anandrlad@gmail.com" class="btn btn-primary">Email Me</a>
+                    <a href="https://www.linkedin.com/in/anand-lad-80861a8b/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+                    <a href="https://github.com/anandrlad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Built with clean HTML, CSS & JS. Zero dependencies.</p>
+            </footer>
+        </main>
     </div>
-
-    <!-- Philosophy Section -->
-    <section class="section" id="philosophy">
-        <h2 class="section-title">Engineering Philosophy</h2>
-        <div class="philosophy-grid">
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">☁️</div>
-                <h3>Cloud Architecture</h3>
-                <p>Designing robust AWS infrastructure for ML model hosting, microservices, and enterprise-scale systems with high availability.</p>
-            </div>
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">⚙️</div>
-                <h3>Operational Excellence</h3>
-                <p>Reducing incidents, automating operational tasks, and implementing best practices that keep systems running at 99%+ uptime.</p>
-            </div>
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">🤝</div>
-                <h3>Technical Leadership</h3>
-                <p>Mentoring engineers across regions, building documentation culture, and driving cross-functional collaboration at scale.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in" data-modal="project1">
-                <div class="project-year">2023–Present</div>
-                <h3>Staffing-Agency Service</h3>
-                <p>End-to-end development and enhancement of a staffing-agency microservice for the AGI-DS Ops Tech team.</p>
-                <div class="project-tags">
-                    <span>Java</span><span>AWS</span><span>Microservices</span>
-                </div>
-                <a href="#" class="project-link">Read More →</a>
-            </div>
-            <div class="project-card fade-in" data-modal="project2">
-                <div class="project-year">2023–Present</div>
-                <h3>Text-Extraction Service</h3>
-                <p>Built and enhanced a text-extraction service and P&C Project supporting AI/ML pipelines.</p>
-                <div class="project-tags">
-                    <span>Python</span><span>AWS</span><span>ML Infrastructure</span>
-                </div>
-                <a href="#" class="project-link">Read More →</a>
-            </div>
-            <div class="project-card fade-in" data-modal="project3">
-                <div class="project-year">2023–Present</div>
-                <h3>Sensai – Secure Browser</h3>
-                <p>Development and maintenance of an internal secure browser used across the organization.</p>
-                <div class="project-tags">
-                    <span>TypeScript</span><span>Security</span><span>DevOps</span>
-                </div>
-                <a href="#" class="project-link">Read More →</a>
-            </div>
-            <div class="project-card fade-in" data-modal="project4">
-                <div class="project-year">2022–2023</div>
-                <h3>AI-Teacher Portal</h3>
-                <p>Microservices development for the AI-Teacher portal supporting Alexa engineers and scientists.</p>
-                <div class="project-tags">
-                    <span>Java</span><span>AWS</span><span>DynamoDB</span>
-                </div>
-                <a href="#" class="project-link">Read More →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>Support Engineer IV</h3>
-                        <span class="timeline-company">Amazon.com Services LLC, USA</span>
-                        <span class="timeline-date">Dec 2022 – Present</span>
-                    </div>
-                    <ul>
-                        <li>Development & enhancement of Staffing-Agency service and Text-Extraction Service</li>
-                        <li>Setup AWS infrastructure for ADS-Science team's ML models hosting</li>
-                        <li>Development & maintenance of internal secure browser (Sensai)</li>
-                        <li>Implemented operational excellence initiatives reducing incidents and infrastructure costs</li>
-                        <li>Managed incidents of various severities; handled SAS, Shepherd, and Policy engine risks</li>
-                        <li>Mentored junior engineers across multiple regions</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>Support Engineer IV</h3>
-                        <span class="timeline-company">Amazon Development Center, India</span>
-                        <span class="timeline-date">Apr 2022 – Dec 2022</span>
-                    </div>
-                    <ul>
-                        <li>Technical support to Alexa Engineers and Scientists for ML model development</li>
-                        <li>Development & enhancement of microservices for ADS Customer Hub portal</li>
-                        <li>Development & maintenance of AWS infrastructure for microservices</li>
-                        <li>Reduced incidents count and infrastructure costs through operational excellence</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>Support Engineer IV</h3>
-                        <span class="timeline-company">Amazon Development Center, India</span>
-                        <span class="timeline-date">May 2021 – Apr 2022</span>
-                    </div>
-                    <ul>
-                        <li>Managed technical operations for physical stores across USA and UK</li>
-                        <li>Led network infrastructure setup for new store launches</li>
-                        <li>Achieved 99% uptime for store operations through proactive monitoring</li>
-                        <li>Automated routine tasks reducing manual effort significantly</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>IT Support Engineer II</h3>
-                        <span class="timeline-company">Amazon Development Center, India</span>
-                        <span class="timeline-date">May 2017 – May 2021</span>
-                    </div>
-                    <ul>
-                        <li>Managed infrastructure operations for Amazon's corporate sites across India</li>
-                        <li>Escalation POC for Mumbai, Pune, and Delhi regions</li>
-                        <li>Led cross-functional teams in networking projects and lab setups</li>
-                        <li>Mentored junior engineers across multiple regions</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>Associate Consultant</h3>
-                        <span class="timeline-company">Capgemini, India</span>
-                        <span class="timeline-date">Mar 2016 – May 2017</span>
-                    </div>
-                    <ul>
-                        <li>Managed network infrastructure for Netherlands data center</li>
-                        <li>Implemented complex network configurations for Cisco enterprise equipment</li>
-                        <li>Orchestrated ISP relationships and connectivity solutions</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <h3>System Engineer</h3>
-                        <span class="timeline-company">Tata Consultancy Services, India</span>
-                        <span class="timeline-date">Feb 2013 – Mar 2016</span>
-                    </div>
-                    <ul>
-                        <li>Managed network infrastructure for 25+ projects</li>
-                        <li>Implemented MPLS, VPN, and IPLC solutions</li>
-                        <li>Automated routine processes improving operational efficiency</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category fade-in">
-                <h3>Cloud & Infrastructure</h3>
-                <div class="skill-tags">
-                    <span>AWS</span><span>Cloud Architecture</span><span>Infrastructure as Code</span><span>DevOps</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span>Java</span><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>jQuery</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3>Networking</h3>
-                <div class="skill-tags">
-                    <span>CCNA R&S</span><span>CCNP R&S</span><span>MPLS</span><span>VPN</span><span>IPLC</span><span>Cisco</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3>Databases & Backend</h3>
-                <div class="skill-tags">
-                    <span>DynamoDB</span><span>MySQL</span><span>MS-SQL</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3>Tools & Platforms</h3>
-                <div class="skill-tags">
-                    <span>IntelliJ</span><span>VS Code</span><span>Wireshark</span><span>Linux</span><span>macOS</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3>Methodologies</h3>
-                <div class="skill-tags">
-                    <span>DevOps</span><span>Agile</span><span>IaC</span><span>Microservices</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="section" id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="philosophy-grid">
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">🏅</div>
-                <h3>CCNA Routing & Switching</h3>
-                <p>Cisco Certified Network Associate — validated expertise in network fundamentals and routing.</p>
-            </div>
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">🏅</div>
-                <h3>CCNP Routing & Switching</h3>
-                <p>Cisco Certified Network Professional — advanced routing, switching, and troubleshooting.</p>
-            </div>
-            <div class="philosophy-card fade-in">
-                <div class="philosophy-icon">📚</div>
-                <h3>AWS SAA (In Progress)</h3>
-                <p>Pursuing AWS Solutions Architect Associate certification to formalize cloud architecture expertise.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="education-grid">
-            <div class="education-card fade-in">
-                <div class="education-year">2012</div>
-                <h3>Mumbai University</h3>
-                <p>Bachelor of Computer Science</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="contact-description">
-            I'm open to discussing opportunities in Cloud Architecture, Distributed Systems, and Technical Leadership roles. Let's chat.
-        </p>
-        <div class="contact-links">
-            <a href="mailto:anandrlad@gmail.com" class="btn btn-primary">Email Me</a>
-            <a href="https://www.linkedin.com/in/anand-lad-80861a8b/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
-            <a href="https://github.com/anandrlad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© Anand R. Lad · Built with clean HTML, CSS & JS · Zero dependencies</p>
-    </footer>
 
     <!-- Project Modals -->
     <div class="modal-overlay" id="modalOverlay">
